@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  pull_request:
+
+jobs:
+  set_env:
+    runs-on: ubuntu-latest
+    steps:
+      - id: set_env
+        name: SetEnv
+        run: |
+          echo "tmp=Message" >> $GITHUB_OUTPUT
